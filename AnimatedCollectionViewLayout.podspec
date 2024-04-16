@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'AnimatedCollectionViewLayout'
-  s.version = '1.1.0'
+  s.version = '1.2.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'A UICollectionViewLayout subclass that adds custom
   transitions/animations to the UICollectionView'
@@ -20,10 +20,16 @@ Pod::Spec.new do |s|
   UICollectionViewCell. Just plug and enjoy.
                        DESC
 
-  s.homepage = 'https://github.com/KelvinJin/AnimatedCollectionViewLayout'
+  s.homepage = 'https://github.com/castbox/AnimatedCollectionViewLayout'
   s.authors = { 'Jin Wang' => 'jinw1990@gmail.com' }
-  s.source = { :git => 'https://github.com/KelvinJin/AnimatedCollectionViewLayout.git', :tag => s.version }
+  s.source = { :git => 'https://github.com/castbox/AnimatedCollectionViewLayout.git', :tag => s.version }
   s.ios.deployment_target = '9.0'
   s.source_files = 'Sources/**/*.swift'
   s.swift_versions = ['5.0', '5.1']
+  
+  s.subspec 'Privacy' do |ss|
+      ss.resource_bundles = {
+        "Privacy" => 'Sources/PrivacyInfo.xcprivacy'
+      }
+  end
 end

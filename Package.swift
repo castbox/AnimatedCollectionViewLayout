@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.5
 
 import PackageDescription
 
@@ -15,7 +15,9 @@ let package = Package(
     targets: [
         .target(
             name: "AnimatedCollectionViewLayout",
-            dependencies: []),
+            path: "Sources",
+            resources: [.process("PrivacyInfo.xcprivacy")]
+        ),
         .testTarget(
             name: "AnimatedCollectionViewLayoutTests",
             dependencies: ["AnimatedCollectionViewLayout"])
